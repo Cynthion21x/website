@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  	<title>Ice100k</title>
+
+  	<script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+  	<meta name="description" content="Welcome to my gallery. here you can find all my artwork">
+
+  	<meta property="og:title" content="Ice100k" />
+	<meta property="og:description" content="Welcome to my gallery. here you can find all my artwork" />
+	<meta property="og:image" content="gallery/spaceSIGNED.png"/>
+
+	<style>
+
+	  .img {
+			border: 1px solid #ccc;
+
+			width: 100%;
+			height: auto;
+			display: block;
+
+			object-fit: cover;
+
+	  }
+
+	  .desc {
+			padding: 10px;
+			text-align: center;
+			background: rgba(0,0,0,0.7);
+			display: block;
+
+			position: absolute;
+
+		    bottom: 0%;
+		    width: 100%;
+
+		    height: 27%;
+		    transition: 0.3s;
+		    transform: scaleY(0);
+	  }
+
+	  .img:hover ~ .desc{
+	  		transform: scaleY(1);
+	  }
+
+	  .desc:hover{
+	  		transform: scaleY(1);
+	  }
+
+
+	  * {
+			box-sizing: border-box;
+	  }
+
+	  .container {
+			padding: 0 6px;
+			float: left;
+			width: 24.99999%;
+	  }
+
+	  @media only screen and (max-width: 700px) {
+		.container {
+			width: 49.99999%;
+		 	margin: 6px 0;
+		}
+	  }
+
+	  @media only screen and (max-width: 500px) {
+		.container {
+		  width: 100%;
+		}
+	  }
+
+	  .imgCont {
+	  	position: relative;
+	  }
+
+	  .down{
+	  	position: absolute;
+
+	  	border: none;
+	  	background-color: #008CBA;
+
+	  	color: white;
+	  	border-radius: 4px;
+
+	  	font-size: 24px;
+
+	  	top: 22%;
+	  	right: 25%;
+	  }
+
+	  .share:hover{
+	  		cursor: pointer;;
+	   }
+
+	   .down:hover{
+	  		cursor: pointer;;
+	   }
+
+	  .share{
+	  	position: absolute;
+
+	  	border: none;
+	  	background-color: #008CBA;
+
+	  	color: white;
+	  	border-radius: 4px;
+
+	  	font-size: 24px;
+
+	  	top: 22%;
+	  	left: 25%
+	  }
+
+	  .invis {
+	  	color: rgba(0,0,0,0);
+	  }
+
+	  #popup {
+
+	  	position: absolute;
+		width: 50%;
+
+		top: 90%;
+		left: 25%;
+
+		display: block;
+		padding: 10px;
+
+		border-radius: 10px;
+
+	  	background-color: black;
+	  	color: white;
+
+	  	text-align: center;
+
+	  	display: none;
+	  }
+
+		ul {
+
+		  padding:0;
+		  text-align: center;
+
+		  list-style-type: none;
+
+		  margin: auto;
+
+		  overflow: hidden;
+
+		  position: -webkit-sticky; 
+		  position: sticky;
+		  top: 0;
+
+		}
+
+		li {
+			display: inline-block;
+
+		}
+
+		li a {
+
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover {
+		  transition: 0.3s;
+		  background-color: white;
+		  color: black;
+		}
+
+		.active {
+		  background-color: white;
+		  color: black;
+		}
+
+
+		body{
+		    background: #e83f77;  
+		}
+
+		.circles{
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    overflow: hidden;
+		}
+
+		.circles li{
+		    position: absolute;
+		    display: block;
+		    list-style: none;
+		    width: 20px;
+		    height: 20px;
+		    background: rgba(255, 255, 255, 0.2);
+		    animation: animate 25s linear infinite;
+		    bottom: -150px;
+		    
+		}
+
+		.circles li:nth-child(1){
+		    left: 25%;
+		    width: 80px;
+		    height: 80px;
+		    animation-delay: 0s;
+		}
+
+
+		.circles li:nth-child(2){
+		    left: 10%;
+		    width: 20px;
+		    height: 20px;
+		    animation-delay: 2s;
+		    animation-duration: 12s;
+		}
+
+		.circles li:nth-child(3){
+		    left: 70%;
+		    width: 20px;
+		    height: 20px;
+		    animation-delay: 4s;
+		}
+
+		.circles li:nth-child(4){
+		    left: 40%;
+		    width: 60px;
+		    height: 60px;
+		    animation-delay: 0s;
+		    animation-duration: 18s;
+		}
+
+		.circles li:nth-child(5){
+		    left: 65%;
+		    width: 20px;
+		    height: 20px;
+		    animation-delay: 0s;
+		}
+
+		.circles li:nth-child(6){
+		    left: 75%;
+		    width: 110px;
+		    height: 110px;
+		    animation-delay: 3s;
+		}
+
+		.circles li:nth-child(7){
+		    left: 35%;
+		    width: 150px;
+		    height: 150px;
+		    animation-delay: 7s;
+		}
+
+		.circles li:nth-child(8){
+		    left: 50%;
+		    width: 25px;
+		    height: 25px;
+		    animation-delay: 15s;
+		    animation-duration: 45s;
+		}
+
+		.circles li:nth-child(9){
+		    left: 20%;
+		    width: 15px;
+		    height: 15px;
+		    animation-delay: 2s;
+		    animation-duration: 35s;
+		}
+
+		.circles li:nth-child(10){
+		    left: 85%;
+		    width: 150px;
+		    height: 150px;
+		    animation-delay: 0s;
+		    animation-duration: 11s;
+		}
+
+
+
+		@keyframes animate {
+
+		    0%{
+		        transform: translateY(0) rotate(0deg);
+		        opacity: 1;
+		        border-radius: 0;
+		    }
+
+		    100%{
+		        transform: translateY(-1000px) rotate(720deg);
+		        opacity: 0;
+		        border-radius: 50%;
+		    }
+
+		}
+
+
+</style>
+</head>
+  	<body>
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+  		<center><h1 style="color:white">ice100k</h1></center>
+
+  		<ul>
+		  <li><a href="#SAD">Home</a></li>
+		  <li><a class="active" href="#SAD">Gallery</a></li>
+		</ul>
+
+		<hr style="color:white;width:87%">
+
+		<br>
+
+		<div class="container">
+			
+				<div class="imgCont">
+
+					<img src="gallery/bannerSIGNED.png" alt="Forest" width="600" height="400" class="img">
+
+					<div class="desc">
+
+						<button class="down" onclick="downloadImage('https://static.wixstatic.com/media/ba7ac1_2bf59dc499334becb8555d5d2bc7365e~mv2.png?dn=Hastune Miku Street Style.png', 'SAD')"><i class="fas fa-file-download"></i></button>
+						<button class="share" onclick="copyTextToClipboard('file:///C:/Users/home/Documents/gabriel/ice100k/website/gallery/bannerSIGNED.png');"><i class="fas fa-link"></i></button>
+
+					</div>
+
+				</div>
+
+		</div>
+
+		<div id="popup">Link Copied</div>
+
+		<script type="text/javascript">
+
+			async function downloadImage(imageSrc, imgname) {
+
+			  const image = await fetch(imageSrc)
+			  const imageBlog = await image.blob()
+			  const imageURL = URL.createObjectURL(imageBlog)
+
+			  const link = document.createElement('a')
+			  link.href = imageURL
+			  link.download = 'imgname'
+			  document.body.appendChild(link)
+			  link.click()
+			  document.body.removeChild(link)
+
+			}
+
+			function fallbackCopyTextToClipboard(text) {
+			  var textArea = document.createElement("textarea");
+			  textArea.value = text;
+			  
+			  
+			  textArea.style.top = "0";
+			  textArea.style.left = "0";
+			  textArea.style.position = "fixed";
+
+			  document.body.appendChild(textArea);
+			  textArea.focus();
+			  textArea.select();
+
+			  try {
+			    var successful = document.execCommand('copy');
+			    var msg = successful ? 'successful' : 'unsuccessful';
+			    console.log('Fallback: Copying text command was ' + msg);
+			  } catch (err) {
+			    console.error('Fallback: Oops, unable to copy', err);
+			  }
+
+			  document.body.removeChild(textArea);
+			}
+			function copyTextToClipboard(text) {
+			  if (!navigator.clipboard) {
+			    fallbackCopyTextToClipboard(text);
+			    return;
+			  }
+			  navigator.clipboard.writeText(text).then(function() {
+			    console.log('Async: Copying to clipboard was successful!');
+			    document.getElementById('popup').style.display = 'block';
+			    hide();
+			  }, function(err) {
+			    console.error('Async: Could not copy text: ', err);
+			  });
+			}
+
+			function hide(){
+				setTimeout(function () {
+					document.getElementById('popup').style.display = 'none';
+					console.log('SAD');
+			    }, 1000);
+
+			}
+
+		</script>
+
+	</body>
+</html>
