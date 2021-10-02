@@ -2,7 +2,7 @@
 <html>
   <head>
 
-  	<title>Ice100k | Charlotte's Legacy</title>
+  	<title>Charlotte's Legacy | Home</title>
 
   	<script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
   	<link rel="shortcut icon" type="image/x-icon" href="https://ice100k.github.io/website/Charlotte/Charlotte.png"/>
@@ -13,7 +13,200 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+
+		body{
+		    background: #000033; font-family: Arial, Helvetica, sans-serif; 
+		}
+
+		.circles{
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    overflow: hidden;
+
+		    pointer-events: none;
+		}
+
+		.circles li{
+		    position: absolute;
+		    display: block;
+		    list-style: none;
+		    width: 20px;
+		    height: 20px;
+		    /*background: rgb(255, 255, 255);*/
+
+		    animation: animate 25s linear infinite;
+		    bottom: -150px;
+		    
+		}
+
+		.circles li:nth-child(1){
+		    left: 25%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 0s;
+
+		    border-top: 40px solid transparent;
+		    border-left: 80px solid white;
+		    border-bottom: 40px solid transparent;
+		}
+
+
+		.circles li:nth-child(2){
+		    left: 10%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 2s;
+		    animation-duration: 12s;
+
+		    border-top: 20px solid transparent;
+		    border-left: 40px solid white;
+		    border-bottom: 20px solid transparent;
+		}
+
+		.circles li:nth-child(3){
+		    left: 70%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 4s;
+
+		    border-top: 10px solid transparent;
+		    border-left: 20px solid white;
+		    border-bottom: 10px solid transparent;
+		}
+
+		.circles li:nth-child(4){
+		    left: 40%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 0s;
+		    animation-duration: 18s;
+
+		    border-top: 30px solid transparent;
+		    border-left: 60px solid white;
+		    border-bottom: 30px solid transparent;
+		}
+
+		.circles li:nth-child(5){
+		    left: 65%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 0s;
+
+		    border-top: 10px solid transparent;
+		    border-left: 20px solid white;
+		    border-bottom: 10px solid transparent;
+		}
+
+		.circles li:nth-child(6){
+		    left: 75%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 3s;
+
+		    border-top: 50px solid transparent;
+		    border-left: 100px solid white;
+		    border-bottom: 50px solid transparent;
+		}
+
+		.circles li:nth-child(7){
+		    left: 35%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 7s;
+
+		    border-top: 75px solid transparent;
+		    border-left: 150px solid white;
+		    border-bottom: 75px solid transparent;
+		}
+
+		.circles li:nth-child(8){
+		    left: 50%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 15s;
+		    animation-duration: 45s;
+
+		    border-top: 25px solid transparent;
+		    border-left: 50px solid white;
+		    border-bottom: 25px solid transparent;
+		}
+
+		.circles li:nth-child(9){
+		    left: 20%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 2s;
+		    animation-duration: 35s;
+
+		    border-top: 5px solid transparent;
+		    border-left: 10px solid white;
+		    border-bottom: 5px solid transparent;
+		}
+
+		.circles li:nth-child(10){
+		    left: 85%;
+		    width: 0px;
+		    height: 0px;
+		    animation-delay: 0s;
+		    animation-duration: 11s;
+
+		    border-top: 75px solid transparent;
+		    border-left: 150px solid white;
+		    border-bottom: 75px solid transparent;
+		}
+
+
+
+		@keyframes animate {
+
+			0%{
+				opacity: 0;
+			}
+
+		    1%{
+		        transform: translateY(0) rotate(0deg);
+		        opacity: 1;
+		    }
+
+		    40%{
+
+		    	opacity: 0;
+
+		    }
+
+		    100%{
+		        transform: translateY(-1000px) rotate(720deg);		     
+		        opacity: 0; 
+		    }
+
+		}
+
+    </style>
+
 	</head>
 
+	<body>
+
+		<ul class="circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		
+
+	</body>
 
 </html>
+
