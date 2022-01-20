@@ -183,7 +183,7 @@
 
 
 		body{
-		    background: #e83f77; font-family: Arial, Helvetica, sans-serif; 
+		    background: #e83f77; font-family: Arial, Helvetica, sans-serif;
 		}
 
 		.circles{
@@ -206,7 +206,7 @@
 		    background: rgba(255, 255, 255, 0.2);
 		    animation: animate 25s linear infinite;
 		    bottom: -150px;
-		    
+
 		}
 
 		.circles li:nth-child(1){
@@ -328,13 +328,13 @@
                     <li></li>
             </ul>
 
-           
+
 		<hr style="color:white;width:87%">
 
 		<br>
 
 		<div class="container">
-			
+
 				<div class="imgCont">
 
 					<img src="gallery/fanart/display-img/fischl.png" alt="fischl" width="600" height="400" class="img">
@@ -352,7 +352,7 @@
 
 
 		<div class="container">
-			
+
 				<div class="imgCont">
 
 					<img src="gallery/fanart/display-img/play.png" alt="play" width="600" height="400" class="img">
@@ -366,10 +366,10 @@
 
 				</div>
 
-		</div>	
+		</div>
 
 		<div class="container">
-			
+
 				<div class="imgCont">
 
 					<img src="gallery/fanart/display-img/god.png" alt="ice100k" width="600" height="400" class="img">
@@ -384,7 +384,24 @@
 				</div>
 
 		</div>
-		
+
+    <div class="container">
+
+        <div class="imgCont">
+
+          <img src="gallery/fanart/display-img/cat.png" alt="cat" width="600" height="400" class="img">
+
+          <div class="desc">
+
+            <button class="down" onclick="downloadImage('https://ice100k.github.io/website/gallery/fanart/cat.png', 'cat')"><i class="fas fa-download"></i></button>
+            <button class="share" onclick="copyTextToClipboard('https://ice100k.github.io/website/gallery/fanart/cat.png');"><i class="fas fa-link"></i></button>
+
+          </div>
+
+        </div>
+
+    </div>
+
 		<div id="popup">Link Copied</div>
 
 		<script type="text/javascript">
@@ -407,8 +424,8 @@
 			function fallbackCopyTextToClipboard(text) {
 			  var textArea = document.createElement("textarea");
 			  textArea.value = text;
-			  
-			  
+
+
 			  textArea.style.top = "0";
 			  textArea.style.left = "0";
 			  textArea.style.position = "fixed";
