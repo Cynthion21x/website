@@ -285,3 +285,21 @@
 		    }
 
 		}
+
+.Sicons {
+
+	position: fixed;
+
+	bottom: 6px;
+	right: 7px;
+
+	padding: 5px;
+
+}
+
+.Sicons i{
+
+	color: white;
+	font-size: 50px;
+
+}

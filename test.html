@@ -2,9 +2,11 @@
 <html>
     <head>
 
-        <title>cynthion21x | Artwork</title>
+        <title id="title">cynthion21x | Artwork</title>
 
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+
+        <script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
 
         <meta property="og:title" content="cynthion21x" />
         <meta property="og:description" content="Welcome to cynthion21x's art gallery here you can see all of my crazy artwork ^.^"/>
@@ -21,11 +23,11 @@
   		<center><h1 style="color:white; text-decoration:underline;pointer-events: none;">cynthion21x</h1></center>
 
   		<ul>
-		  <li><a href="https://cynthion21x.github.io/website/char.html">Characters</a></li>
-		  <li><a class="active" href="https://cynthion21x.github.io/website/index.html">Artwork</a></li>
-		  <li><a href="https://cynthion21x.github.io/website/avatar.html">Avatars</a></li>
+		  <li><a onclick="loadImages('none')">Characters</a></li>
+		  <li><a class="active" onclick="loadImages('none')">Artwork</a></li>
+		  <li><a onclick="loadImages('none')">Avatars</a></li>
           <li><p style="color:white;pointer-events: none;"> | </p></li>
-          <li><a href="https://cynthion21x.github.io/website/avatar.html">Password</a></li>
+          <li><a onclick="linkSite('https://cynthion21x.github.io/JsPasswordMaker/', 'Password')">Password</a></li>
 		</ul>
 
          <ul class="circles">
@@ -45,33 +47,67 @@
 
 		<br>
 
-		<div class="container">
+        <center><div id="main" style="width: 90%;">
 
-			<div class="imgCont">
+            <!-- <div class="container">
 
-				<img src="gallery/timelapse.png" alt="timelapse" width="600" height="400" class="img">
+                <div class="imgCont">
 
-				<div class="desc">
+                    <img src="gallery/timelapse.png" alt="timelapse" width="600" height="400" class="img">
 
-					<button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/timelapse.png', 'timelapse')"><i class="fas fa-download"></i></button>
-					<button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/timelapse.png');"><i class="fas fa-link"></i></button>
+                    <div class="desc">
 
-				</div>
+                        <button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/timelapse.png', 'timelapse')"><i class="fas fa-download"></i></button>
+                        <button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/timelapse.png');"><i class="fas fa-link"></i></button>
 
-			</div>
+                    </div>
 
-		</div>
+                </div>
 
+            </div> -->
+
+        </div></center>
 
         <div id="popup">Link Copied</div>
 
-        <script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
+        <div class="Sicons">
+            <a href="https://github.com/cynthion21x"><i class="fab fa-github-alt"></i></a>
+        </div>
+
         <script src="buttons.js"></script> 
 
-        <script src="loadImages.js"></script>
         <script>
 
             console.log("Enjoy whatever funny buisness you get up to in here 0.o")
+
+            const avatars = ["cat", "charlotte", "god", "icon"]
+            const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse"]
+            const characters = ["cat", "ErraticNeglectsEmpty", "sylveon"]
+
+            const main = document.getElementById("main");
+            const title = document.getElementById("title");
+
+            function loadImages(imageSet){
+
+                main.innerHTML = '';
+
+            }
+
+            function linkSite(url, name){
+
+                main.innerHTML = '';
+
+                title.innerHTML = 'Cynthion21x | ' + name;
+
+                var embedd = document.createElement("embed");
+                embedd.setAttribute("type", "text/html");
+                embedd.setAttribute("src", url);
+                embedd.setAttribute("width", "100%");
+                embedd.setAttribute("height", "100%");
+
+                main.appendChild(embedd);
+
+            }
 
         </script>
 
