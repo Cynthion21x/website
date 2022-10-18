@@ -23,31 +23,31 @@
   		<center><h1 style="color:white; text-decoration:underline;pointer-events: none;">cynthion21x</h1></center>
 
   		<ul>
-		  <li><a onclick="loadImages('none')">Characters</a></li>
-		  <li><a class="active" onclick="loadImages('none')">Artwork</a></li>
-		  <li><a onclick="loadImages('none')">Avatars</a></li>
+		  <li><a id="char" onclick="loadImages('none', 'char')">Characters</a></li>
+		  <li><a id="art" class="active" onclick="loadImages('none', 'art')">Artwork</a></li>
+		  <li><a id="av" onclick="loadImages('none', 'av')">Avatars</a></li>
           <li><p style="color:white;pointer-events: none;"> | </p></li>
-          <li><a onclick="linkSite('https://cynthion21x.github.io/JsPasswordMaker/', 'Password')">Password</a></li>
+          <li><a id="pas" onclick="linkSite('https://cynthion21x.github.io/JsPasswordMaker/', 'Password', 'pas')">Password</a></li>
 		</ul>
 
          <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
 
 		<hr style="color:white;width:87%;border-radius:3px;border:2px solid white;">
 
 		<br>
 
-        <center><div id="main" style="width: 90%;">
+        <div id="main">
 
             <!-- <div class="container">
 
@@ -66,7 +66,7 @@
 
             </div> -->
 
-        </div></center>
+        </div>
 
         <div id="popup">Link Copied</div>
 
@@ -87,25 +87,48 @@
             const main = document.getElementById("main");
             const title = document.getElementById("title");
 
-            function loadImages(imageSet){
+            function loadImages(imageSet, id){
 
                 main.innerHTML = '';
 
+                var idd = document.getElementById(id);
+
+                activ = document.getElementsByClassName("active");
+
+                activ[0].setAttribute("class", "");
+
+                idd.setAttribute("class", "active");
+
             }
 
-            function linkSite(url, name){
+            function linkSite(url, name, id){
 
                 main.innerHTML = '';
 
                 title.innerHTML = 'Cynthion21x | ' + name;
 
                 var embedd = document.createElement("embed");
+
+                var emHold = document.createElement("div");
+
                 embedd.setAttribute("type", "text/html");
                 embedd.setAttribute("src", url);
                 embedd.setAttribute("width", "100%");
                 embedd.setAttribute("height", "100%");
 
-                main.appendChild(embedd);
+                emHold.setAttribute("class", "page");
+
+                emHold.appendChild(embedd);
+                main.appendChild(emHold);
+
+                var idd = document.getElementById(id);
+
+                activ = document.getElementsByClassName("active");
+
+                activ[0].setAttribute("class", "");
+
+                idd.setAttribute("class", "active");
+
 
             }
 

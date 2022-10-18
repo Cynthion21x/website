@@ -167,6 +167,7 @@
 
 		body{
 		    background: #e83f77; font-family: Arial, Helvetica, sans-serif;
+			margin: 8px;
 		}
 
 		.circles{
@@ -301,5 +302,26 @@
 
 	color: white;
 	font-size: 50px;
+
+}
+
+.page {
+
+	position: absolute;
+
+	width: 90%;
+	left: 5%;
+
+	height: 65%;
+
+}
+
+#main {
+
+	box-sizing: border-box;
+	display: block;
+	float: none;
+	line-height: normal;
+	position: static;
 
 }
