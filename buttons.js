@@ -1,3 +1,5 @@
+// Copy - Download image
+
 async function downloadImage(imageSrc, imgname) {
 
     const image = await fetch(imageSrc)
@@ -55,5 +57,198 @@ async function downloadImage(imageSrc, imgname) {
           document.getElementById('popup').style.display = 'none';
           console.log('SAD');
       }, 1000);
+
+  }
+
+// Load Content
+
+  const avatars = ["cat", "charlotte", "god", "icon"]
+  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse"]
+  const characters = ["cat", "ErraticNegelectsEmpty", "sylveon"]
+
+  const main = document.getElementById("main");
+  const title = document.getElementById("title");
+
+  function loadImages(Characters, id){
+
+      main.innerHTML = '';
+
+      title.innerHTML = 'Cynthion21x | ' + Characters;
+
+      if (Characters == 'Characters') {
+
+          for (let i = 0; i < characters.length; i++){
+
+              //
+              var photoCont = document.createElement("div");
+              photoCont.setAttribute("class", "container");
+              var photoHold = document.createElement("div");
+              photoHold.setAttribute("class", "imgCont");
+
+              //
+              var image = document.createElement("img");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/fanart/display-img/" + characters[i] + ".png");
+              image.setAttribute("class", "img");
+              image.setAttribute("width", "600");
+              image.setAttribute("height", "400");
+
+              photoHold.appendChild(image);
+
+              //
+              var descHold = document.createElement("div");
+              descHold.setAttribute("class", "desc");
+
+              //
+              var buttonDown = document.createElement("button")
+              buttonDown.setAttribute("class", "down");
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/fanart/' + characters[i] + '.png', characters[i])};
+              buttonDown.innerHTML = '<i class="fas fa-download"></i>'
+
+              descHold.appendChild(buttonDown);
+
+              //
+              var buttonUp = document.createElement("button")
+              buttonUp.setAttribute("class", "share");
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/fanart/' + characters[i] + '.png')};
+              buttonUp.innerHTML = '<i class="fas fa-link"></i>'
+
+              descHold.appendChild(buttonUp);
+
+              photoHold.appendChild(descHold);
+          
+              photoCont.appendChild(photoHold);
+              main.appendChild(photoCont)
+          }
+
+      } else if(Characters == "Artwork") {
+
+          for (let i = 0; i < artwork.length; i++){
+
+              //
+              var photoCont = document.createElement("div");
+              photoCont.setAttribute("class", "container");
+              var photoHold = document.createElement("div");
+              photoHold.setAttribute("class", "imgCont");
+
+              //
+              var image = document.createElement("img");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/" + artwork[i] + ".png");
+              image.setAttribute("class", "img");
+              image.setAttribute("width", "600");
+              image.setAttribute("height", "400");
+
+              photoHold.appendChild(image);
+
+              //
+              var descHold = document.createElement("div");
+              descHold.setAttribute("class", "desc");
+
+              //
+              var buttonDown = document.createElement("button")
+              buttonDown.setAttribute("class", "down");
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/' + artwork[i] + '.png', characters[i])};
+              buttonDown.innerHTML = '<i class="fas fa-download"></i>'
+
+              descHold.appendChild(buttonDown);
+
+              //
+              var buttonUp = document.createElement("button")
+              buttonUp.setAttribute("class", "share");
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/' + artwork[i] + '.png')};
+              buttonUp.innerHTML = '<i class="fas fa-link"></i>'
+
+              descHold.appendChild(buttonUp);
+
+              photoHold.appendChild(descHold);
+
+              photoCont.appendChild(photoHold);
+              main.appendChild(photoCont)
+          }
+
+      } else if (Characters == "Avatars"){
+
+          for (let i = 0; i < avatars.length; i++){
+
+              //
+              var photoCont = document.createElement("div");
+              photoCont.setAttribute("class", "container");
+              var photoHold = document.createElement("div");
+              photoHold.setAttribute("class", "imgCont");
+
+              //
+              var image = document.createElement("img");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/avatars/" + avatars[i] + ".png");
+              image.setAttribute("class", "img");
+              image.setAttribute("width", "600");
+              image.setAttribute("height", "400");
+
+              photoHold.appendChild(image);
+
+              //
+              var descHold = document.createElement("div");
+              descHold.setAttribute("class", "desc");
+
+              //
+              var buttonDown = document.createElement("button")
+              buttonDown.setAttribute("class", "down");
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/avatars/' + avatars[i] + '.png', characters[i])};
+              buttonDown.innerHTML = '<i class="fas fa-download"></i>'
+
+              descHold.appendChild(buttonDown);
+
+              //
+              var buttonUp = document.createElement("button")
+              buttonUp.setAttribute("class", "share");
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/avatars/' + avatars[i] + '.png')};
+              buttonUp.innerHTML = '<i class="fas fa-link"></i>'
+
+              descHold.appendChild(buttonUp);
+
+              photoHold.appendChild(descHold);
+
+              photoCont.appendChild(photoHold);
+              main.appendChild(photoCont)
+              }
+
+      }
+
+      var idd = document.getElementById(id);
+
+      activ = document.getElementsByClassName("active");
+
+      activ[0].setAttribute("class", "");
+
+      idd.setAttribute("class", "active");
+
+  }
+
+  function linkSite(url, name, id){
+
+      main.innerHTML = '';
+
+      title.innerHTML = 'Cynthion21x | ' + name;
+
+      var embedd = document.createElement("embed");
+
+      var emHold = document.createElement("div");
+
+      embedd.setAttribute("type", "text/html");
+      embedd.setAttribute("src", url);
+      embedd.setAttribute("width", "100%");
+      embedd.setAttribute("height", "100%");
+
+      emHold.setAttribute("class", "page");
+
+      emHold.appendChild(embedd);
+      main.appendChild(emHold);
+
+      var idd = document.getElementById(id);
+
+      activ = document.getElementsByClassName("active");
+
+      activ[0].setAttribute("class", "");
+
+      idd.setAttribute("class", "active");
+
 
   }

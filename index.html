@@ -1,155 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
 
-  	<title>cynthion21x | Artwork</title>
+        <title id="title">cynthion21x | Artwork</title>
 
-  	<script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
-  	<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
 
-  	<meta property="og:title" content="cynthion21x" />
-	<meta property="og:description" content="Welcome to cynthion21x's art gallery here you may find art assets usef for games or made just for fun!" />
-	<meta property="og:image" content="https://cynthion21x.github.io/website/gallery/icybench.png"/>
+        <script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="cynthion21x" />
+        <meta property="og:description" content="Welcome to cynthion21x's art gallery here you can see all of my crazy artwork ^.^"/>
+        <meta property="og:image" content="https://cynthion21x.github.io/website/gallery/cynthBanner.png"/>
 
-	<link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
-  	<body>
+        <link rel="stylesheet" href="style.css">
 
-  		<center><a href="https://github.com/cynthion21x"><h1 style="color:white; text-decoration:underline;">Cynthion21x</h1></a></center>
+    </head>
+
+  	<body onload="loadImages('Artwork', 'art')">
+
+  		<center><h1 style="color:white; text-decoration:underline;pointer-events: none;">cynthion21x</h1></center>
 
   		<ul>
-		  <li><a href="https://cynthion21x.github.io/website/char.html">Characters</a></li>
-		  <li><a class="active" href="https://cynthion21x.github.io/website/index.html">Artwork</a></li>
-		  <li><a href="https://cynthion21x.github.io/website/avatar.html">Avatars</a></li>
+		  <li><a id="char" onclick="loadImages('Characters', 'char')">Characters</a></li>
+		  <li><a id="art" class="active" onclick="loadImages('Artwork', 'art')">Artwork</a></li>
+		  <li><a id="av" onclick="loadImages('Avatars', 'av')">Avatars</a></li>
+          <li><p style="color:white;pointer-events: none;"> | </p></li>
+          <li><a id="pas" onclick="linkSite('https://cynthion21x.github.io/JsPasswordMaker/', 'Password', 'pas')">Password</a></li>
 		</ul>
 
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
+         <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
 
-		<hr style="color:white;width:87%">
+		<hr style="color:white;width:87%;border-radius:3px;border:2px solid white;">
 
 		<br>
 
-		<div class="container">
+        <div id="main">
 
-				<div class="imgCont">
+            <!-- <div class="container">
 
-					<img src="gallery/timelapse.png" alt="timelapse" width="600" height="400" class="img">
+                <div class="imgCont">
 
-					<div class="desc">
+                    <img src="gallery/timelapse.png" alt="timelapse" width="600" height="400" class="img">
 
-						<button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/timelapse.png', 'timelapse')"><i class="fas fa-download"></i></button>
-						<button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/timelapse.png');"><i class="fas fa-link"></i></button>
+                    <div class="desc">
 
-					</div>
+                        <button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/timelapse.png', 'timelapse')"><i class="fas fa-download"></i></button>
+                        <button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/timelapse.png');"><i class="fas fa-link"></i></button>
 
-				</div>
+                    </div>
 
-		</div>
+                </div>
 
-
-		<div class="container">
-
-				<div class="imgCont">
-
-					<img src="gallery/crazy.png" alt="crazy" width="600" height="400" class="img">
-
-					<div class="desc">
-
-						<button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/crazy.png', 'crazy')"><i class="fas fa-download"></i></button>
-						<button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/crazy.png');"><i class="fas fa-link"></i></button>
-
-					</div>
-
-				</div>
-
-		</div>
-
-		<div class="container">
-
-				<div class="imgCont">
-
-					<img src="gallery/preview.png" alt="preview" width="600" height="400" class="img">
-
-					<div class="desc">
-
-						<button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/preview.png', 'preview')"><i class="fas fa-download"></i></button>
-						<button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/preview.png');"><i class="fas fa-link"></i></button>
-
-					</div>
-
-				</div>
-
-		</div>
-
-    <div class="container">
-
-        <div class="imgCont">
-
-          <img src="gallery/catbg.png" alt="catbg" width="600" height="400" class="img">
-
-          <div class="desc">
-
-            <button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/catbg.png', 'catbg')"><i class="fas fa-download"></i></button>
-            <button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/catbg.png');"><i class="fas fa-link"></i></button>
-
-          </div>
+            </div> -->
 
         </div>
 
-    </div>
+        <div id="popup">Link Copied</div>
 
-    <div class="container">
+        <div class="Sicons">
+            <a href="https://github.com/cynthion21x"><i class="fab fa-github-alt"></i></a>
+        </div>
 
-        <div class="imgCont">
+        <script src="buttons.js"></script> 
 
-          <img src="gallery/cynthBanner.png" alt="catbg" width="600" height="400" class="img">
+        <script>
 
-          <div class="desc">
+            console.log("Enjoy whatever funny buisness you get up to in here 0.o")
 
-            <button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/cynthBanner.pn.png', 'cynthBanner.pn')"><i class="fas fa-download"></i></button>
-            <button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/cynthBanner.pn.png');"><i class="fas fa-link"></i></button>
-
-          </div>
-
-    	</div>
-
-	</div>
-
-		<div class="container">
-
-			<div class="imgCont">
-	
-			  <img src="gallery/Charlotte.png" alt="charlotte" width="600" height="400" class="img">
-	
-			  <div class="desc">
-	
-				<button class="down" onclick="downloadImage('https://cynthion21x.github.io/website/gallery/Charlotte.png', 'Charlotte')"><i class="fas fa-download"></i></button>
-				<button class="share" onclick="copyTextToClipboard('https://cynthion21x.github.io/website/gallery/Charlotte.png');"><i class="fas fa-link"></i></button>
-	
-			  </div>
-	
-		</div>
-
-    </div>
-
-
-	<div id="popup">Link Copied</div>
-
-	<script src="buttons.js"></script> 
+        </script>
 
 	</body>
 </html>
