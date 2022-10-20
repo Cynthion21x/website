@@ -1,4 +1,37 @@
-	  .img {
+.down{
+	position: absolute;
+
+	border: none;
+	background-color: #008CBA;
+
+	color: white;
+	border-radius: 4px;
+
+	font-size: 20px;
+
+	top: 22%;
+	right: 25%;
+
+}
+
+.share{
+	position: absolute;
+
+	border: none;
+	background-color: #008CBA;
+
+	color: white;
+	border-radius: 4px;
+
+	font-size: 20px;
+
+	top: 22%;
+	left: 25%;
+
+}
+
+
+	.img {
 			border: 3px solid white;
 
 			width: 100%;
@@ -9,27 +42,24 @@
 	  }
 
 	  .desc {
-			padding: 10px;
-			text-align: center;
-			background: rgba(0,0,0,0.7);
-			display: block;
 
 			position: absolute;
-
-		    bottom: 0%;
-		    width: 100%;
-
-		    height: 27%;
-		    transition: 0.3s;
-		    transform: scaleY(0);
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: #000000a6;
+			overflow: hidden;
+			width: 100%;
+			height: 0;
+			transition: .5s ease;
 	  }
 
 	  .img:hover ~ .desc{
-	  		transform: scaleY(1);
+	  		height: 25%;
 	  }
 
 	  .desc:hover{
-	  		transform: scaleY(1);
+	  		height: 25%;
 	  }
 
 
@@ -48,11 +78,25 @@
 			width: 49.99999%;
 		 	margin: 6px 0;
 		}
+
+		
 	  }
 
 	  @media only screen and (max-width: 500px) {
 		.container {
 		  width: 100%;
+		}
+
+		.down{
+
+			font-size: 25px;
+
+		}
+
+		.share{
+
+			font-size: 25px;
+
 		}
 	  }
 
@@ -60,20 +104,6 @@
 	  	position: relative;
 	  }
 
-	  .down{
-	  	position: absolute;
-
-	  	border: none;
-	  	background-color: #008CBA;
-
-	  	color: white;
-	  	border-radius: 4px;
-
-	  	font-size: 24px;
-
-	  	top: 22%;
-	  	right: 25%;
-	  }
 
 	  .share:hover{
 	  		cursor: pointer;
@@ -82,21 +112,6 @@
 	   .down:hover{
 	  		cursor: pointer;
 	   }
-
-	  .share{
-	  	position: absolute;
-
-	  	border: none;
-	  	background-color: #008CBA;
-
-	  	color: white;
-	  	border-radius: 4px;
-
-	  	font-size: 24px;
-
-	  	top: 22%;
-	  	left: 25%
-	  }
 
 	  .invis {
 	  	color: rgba(0,0,0,0);
@@ -297,12 +312,20 @@
 
 	padding: 5px;
 
+	height: 60px;
+	width: 60px;
+
+	background-color: #e83f7757;
+	border-radius: 5px;
+
 }
 
 .Sicons i{
 
 	color: white;
 	font-size: 50px;
+
+	text-align: center;
 
 }
 
