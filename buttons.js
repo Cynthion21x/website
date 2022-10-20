@@ -87,10 +87,9 @@ async function downloadImage(imageSrc, imgname) {
 
               //
               var image = document.createElement("img");
-              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/fanart/display-img/" + characters[i] + ".png");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/fanart/" + characters[i] + ".png");
               image.setAttribute("class", "img");
-              image.setAttribute("width", "600");
-              image.setAttribute("height", "400");
+              image.setAttribute("height", "506");
 
               photoHold.appendChild(image);
 
@@ -134,8 +133,7 @@ async function downloadImage(imageSrc, imgname) {
               var image = document.createElement("img");
               image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/" + artwork[i] + ".png");
               image.setAttribute("class", "img");
-              image.setAttribute("width", "600");
-              image.setAttribute("height", "400");
+              image.setAttribute("height", "174");
 
               photoHold.appendChild(image);
 
@@ -179,8 +177,7 @@ async function downloadImage(imageSrc, imgname) {
               var image = document.createElement("img");
               image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/avatars/" + avatars[i] + ".png");
               image.setAttribute("class", "img");
-              image.setAttribute("width", "600");
-              image.setAttribute("height", "400");
+              image.setAttribute("height", "300");
 
               photoHold.appendChild(image);
 
@@ -236,6 +233,8 @@ async function downloadImage(imageSrc, imgname) {
       embedd.setAttribute("src", url);
       embedd.setAttribute("width", "100%");
       embedd.setAttribute("height", "100%");
+
+      emHold.setAttribute("style", "border: 4px solid white;");
 
       emHold.setAttribute("class", "page");
 
