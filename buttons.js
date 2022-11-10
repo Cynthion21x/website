@@ -64,7 +64,7 @@ async function downloadImage(imageSrc, imgname) {
 
   const avatars = ["cat", "charlotte", "god", "icon"]
   const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase"]
-  const characters = ["cat", "ErraticNegelectsEmpty", "sylveon"]
+  const characters = ["cat", "ErraticNegelectsEmpty", "sylveon", "charlotte"]
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
@@ -251,3 +251,63 @@ async function downloadImage(imageSrc, imgname) {
 
 
   }
+
+
+  function loadGames() {
+
+    main.innerHTML = '';
+
+    title.innerHTML = 'Cynthion21x | Games';
+
+    var games = ["BeeTD"];
+
+    for (let i = 0; i < games.length; i++){
+
+              //
+              var photoCont = document.createElement("div");
+              photoCont.setAttribute("class", "container");
+              var photoHold = document.createElement("div");
+              photoHold.setAttribute("class", "imgCont");
+
+              //
+              var image = document.createElement("img");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/gameBanners/" + games[i] + ".png");
+              image.setAttribute("class", "img");
+              image.setAttribute("height", "174");
+
+              photoHold.appendChild(image);
+
+              //
+              var descHold = document.createElement("div");
+              descHold.setAttribute("class", "desc");
+
+              var buttonDown = document.createElement("button")
+              buttonDown.setAttribute("class", "down");
+              buttonDown.onclick = function() {window.location.href = 'https://github.com/Cynthion21x/' + games[i] + '/releases/latest/'};
+              buttonDown.innerHTML = '<i class="fas fa-play"></i>'
+
+              //
+              var buttonUp = document.createElement("button")
+              buttonUp.setAttribute("class", "share");
+              buttonUp.onclick = function() {copyTextToClipboard('https://github.com/Cynthion21x/' + games[i])};
+              buttonUp.innerHTML = '<i class="fas fa-link"></i>'
+
+              descHold.appendChild(buttonDown);
+              descHold.appendChild(buttonUp);
+
+              photoHold.appendChild(descHold);
+
+              photoCont.appendChild(photoHold);
+              main.appendChild(photoCont)
+
+    }
+
+    var idd = document.getElementById("ga");
+
+    activ = document.getElementsByClassName("active");
+
+    activ[0].setAttribute("class", "");
+
+    idd.setAttribute("class", "active");
+
+}
