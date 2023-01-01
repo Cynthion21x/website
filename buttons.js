@@ -75,7 +75,7 @@ async function downloadImage(imageSrc, imgname) {
 
       title.innerHTML = 'Cynthion21x | ' + Characters;
 
-      if (Characters == 'Characters') {
+      if (Characters == 'Portraits') {
 
           for (let i = 0; i < characters.length; i++){
 
