@@ -63,7 +63,7 @@ async function downloadImage(imageSrc, imgname) {
 // Load Content
 
   const avatars = ["cat", "charlotte", "god", "icon"]
-  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase"]
+  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn"]
   const characters = ["cat", "ErraticNegelectsEmpty", "sylveon", "charlotte", "cynthion", "hollowKnight"]
 
   const main = document.getElementById("main");
