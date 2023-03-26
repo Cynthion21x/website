@@ -283,13 +283,20 @@ async function downloadImage(imageSrc, imgname) {
 
               var buttonDown = document.createElement("button")
               buttonDown.setAttribute("class", "down");
-              buttonDown.onclick = function() {window.location.href = 'https://github.com/Cynthion21x/' + games[i] + '/releases/latest/'};
+
+              if (games[i] == "BeeTD") {
+
+                buttonDown.onclick = function() {window.location.href = 'https://cynthion21x.github.io/BeeTDWebGl/'};
+
+              }
+
+              
               buttonDown.innerHTML = '<i class="fas fa-play"></i>'
 
               //
               var buttonUp = document.createElement("button")
               buttonUp.setAttribute("class", "share");
-              buttonUp.onclick = function() {copyTextToClipboard('https://github.com/Cynthion21x/' + games[i])};
+              buttonUp.onclick = function() {copyTextToClipboard('https://github.com/Cynthion21x/' + games[i] + '/releases/latest/')};
               buttonUp.innerHTML = '<i class="fas fa-link"></i>'
 
               descHold.appendChild(buttonDown);
