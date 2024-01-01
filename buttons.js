@@ -63,7 +63,7 @@ async function downloadImage(imageSrc, imgname) {
 // Load Content
 
   const avatars = ["cat", "charlotte", "god", "icon", "beetd", "slug", "godofeverythingelse"]
-  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween"]
+  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket"]
   const characters = ["ErraticNegelectsEmpty", "sylveon", "charlotte", "cynthion", "hollowKnight", "ghostling", "Bearz", "strawberryCapKittens", "strawberryNeglects", "cynton", "seaslug", "perspective", "cardconveyorplayer"]
 
   const main = document.getElementById("main");
