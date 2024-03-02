@@ -266,45 +266,10 @@ async function downloadImage(imageSrc, imgname) {
               //
               var photoCont = document.createElement("div");
               photoCont.setAttribute("class", "container");
-              var photoHold = document.createElement("div");
-              photoHold.setAttribute("class", "imgCont");
 
               //
-              var image = document.createElement("img");
-              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/gameBanners/" + games[i] + ".png");
-              image.setAttribute("class", "img");
-              image.setAttribute("height", "174");
+              photoCont.innerHTML = '<iframe frameborder="0" src="https://itch.io/embed/1787338?bg_color=41572c&amp;fg_color=fffd35&amp;link_color=b8872a&amp;border_color=41572c" width="552" height="167"><a href="https://cynthion21x.itch.io/beetd">BeeTD by cynthion21x</a></iframe>'
 
-              photoHold.appendChild(image);
-
-              //
-              var descHold = document.createElement("div");
-              descHold.setAttribute("class", "desc");
-
-              var buttonDown = document.createElement("button")
-              buttonDown.setAttribute("class", "down");
-
-              if (games[i] == "BeeTD") {
-
-                buttonDown.onclick = function() {window.location.href = 'https://cynthion21x.github.io/BeeTDWebGl/'};
-
-              }
-
-              
-              buttonDown.innerHTML = '<i class="fas fa-play"></i>'
-
-              //
-              var buttonUp = document.createElement("button")
-              buttonUp.setAttribute("class", "share");
-              buttonUp.onclick = function() {copyTextToClipboard('https://github.com/Cynthion21x/' + games[i] + '/releases/latest/')};
-              buttonUp.innerHTML = '<i class="fas fa-link"></i>'
-
-              descHold.appendChild(buttonDown);
-              descHold.appendChild(buttonUp);
-
-              photoHold.appendChild(descHold);
-
-              photoCont.appendChild(photoHold);
               main.appendChild(photoCont)
 
     }
