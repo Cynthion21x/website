@@ -63,7 +63,11 @@ async function downloadImage(imageSrc, imgname) {
 // Load Content
 
   const avatars = ["cat", "charlotte", "god", "icon", "beetd", "slug", "godofeverythingelse"]
+<<<<<<< HEAD
   const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "jellyfish", "bedman"]
+=======
+  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "jellyfish", "redLiz", "vulture", "puffin"]
+>>>>>>> 35b01ec (puffin :D)
   const characters = ["ErraticNegelectsEmpty", "sylveon", "charlotte", "cynthion", "hollowKnight", "ghostling", "Bearz", "strawberryCapKittens", "strawberryNeglects", "cynton", "seaslug", "perspective", "cardconveyorplayer", "BeeTd"]
 
   const main = document.getElementById("main");
@@ -121,7 +125,7 @@ async function downloadImage(imageSrc, imgname) {
 
       } else if(Characters == "Artwork") {
 
-          for (let i = 0; i < artwork.length; i++){
+          for (let i = artwork.length - 1; i >= 0; i--){
 
               //
               var photoCont = document.createElement("div");
@@ -144,7 +148,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonDown = document.createElement("button")
               buttonDown.setAttribute("class", "down");
-              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/' + artwork[i] + '.png', characters[i])};
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/' + artwork[i] + '.png', artwork[i])};
               buttonDown.innerHTML = '<i class="fas fa-download"></i>'
 
               descHold.appendChild(buttonDown);
