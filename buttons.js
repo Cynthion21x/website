@@ -63,11 +63,7 @@ async function downloadImage(imageSrc, imgname) {
 // Load Content
 
   const avatars = ["cat", "charlotte", "god", "icon", "beetd", "slug", "godofeverythingelse"]
-<<<<<<< HEAD
-  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "jellyfish", "bedman"]
-=======
-  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "jellyfish", "redLiz", "vulture", "puffin"]
->>>>>>> 35b01ec (puffin :D)
+  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "redLiz", "vulture", "puffin"]
   const characters = ["ErraticNegelectsEmpty", "sylveon", "charlotte", "cynthion", "hollowKnight", "ghostling", "Bearz", "strawberryCapKittens", "strawberryNeglects", "cynton", "seaslug", "perspective", "cardconveyorplayer", "BeeTd"]
 
   const main = document.getElementById("main");
