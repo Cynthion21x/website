@@ -62,9 +62,11 @@ async function downloadImage(imageSrc, imgname) {
 
 // Load Content
 
-  const avatars = ["cat", "charlotte", "god", "icon", "beetd", "slug", "godofeverythingelse"]
-  const artwork = ["catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "sunBeam", "beeTDirl", "terrariaEOC", "stormboundhalloween", "plasmaClocket", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "redLiz", "vulture", "puffin", "EmperorCaterpillar"]
-  const characters = ["ErraticNegelectsEmpty", "sylveon", "charlotte", "cynthion", "hollowKnight", "ghostling", "Bearz", "strawberryCapKittens", "strawberryNeglects", "cynton", "seaslug", "perspective", "cardconveyorplayer", "BeeTd"]
+  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "charlotteScared", "sunBeam", "beetd", "tompfp-bg","wooper" "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
+
+  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase.png", "pawn", "beeTDirl", "terrariaEOC","neglects2" "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon"];
+
+  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNeglectsEmpty", "shadowyCard", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cardGod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer"]; 
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
@@ -75,9 +77,9 @@ async function downloadImage(imageSrc, imgname) {
 
       title.innerHTML = 'Cynthion21x | ' + Characters;
 
-      if (Characters == 'Portraits') {
+      if (id == 'ver') {
 
-          for (let i = 0; i < characters.length; i++){
+          for (let i = 0; i < vertical.length; i++){
 
               //
               var photoCont = document.createElement("div");
@@ -87,7 +89,7 @@ async function downloadImage(imageSrc, imgname) {
 
               //
               var image = document.createElement("img");
-              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/fanart/" + characters[i] + ".png");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/vertical/" + vertical[i] + ".png");
               image.setAttribute("class", "img");
               image.setAttribute("height", "506");
 
@@ -100,7 +102,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonDown = document.createElement("button")
               buttonDown.setAttribute("class", "down");
-              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/fanart/' + characters[i] + '.png', characters[i])};
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/vertical/' + vertical[i] + '.png', vertical[i])};
               buttonDown.innerHTML = '<i class="fas fa-download"></i>'
 
               descHold.appendChild(buttonDown);
@@ -108,7 +110,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonUp = document.createElement("button")
               buttonUp.setAttribute("class", "share");
-              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/fanart/' + characters[i] + '.png')};
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/vertical/' + vertical[i] + '.png')};
               buttonUp.innerHTML = '<i class="fas fa-link"></i>'
 
               descHold.appendChild(buttonUp);
@@ -119,9 +121,9 @@ async function downloadImage(imageSrc, imgname) {
               main.appendChild(photoCont)
           }
 
-      } else if(Characters == "Artwork") {
+      } else if(id == "hor") {
 
-          for (let i = artwork.length - 1; i >= 0; i--){
+          for (let i = horizontal.length - 1; i >= 0; i--){
 
               //
               var photoCont = document.createElement("div");
@@ -131,7 +133,7 @@ async function downloadImage(imageSrc, imgname) {
 
               //
               var image = document.createElement("img");
-              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/" + artwork[i] + ".png");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/" + horizontal[i] + ".png");
               image.setAttribute("class", "img");
               image.setAttribute("height", "174");
 
@@ -144,7 +146,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonDown = document.createElement("button")
               buttonDown.setAttribute("class", "down");
-              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/' + artwork[i] + '.png', artwork[i])};
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/' + horizontal[i] + '.png', horizontal[i])};
               buttonDown.innerHTML = '<i class="fas fa-download"></i>'
 
               descHold.appendChild(buttonDown);
@@ -152,7 +154,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonUp = document.createElement("button")
               buttonUp.setAttribute("class", "share");
-              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/' + artwork[i] + '.png')};
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/' + horizontal[i] + '.png')};
               buttonUp.innerHTML = '<i class="fas fa-link"></i>'
 
               descHold.appendChild(buttonUp);
@@ -163,9 +165,9 @@ async function downloadImage(imageSrc, imgname) {
               main.appendChild(photoCont)
           }
 
-      } else if (Characters == "Avatars"){
+      } else if (id == "squ"){
 
-          for (let i = 0; i < avatars.length; i++){
+          for (let i = 0; i < square.length; i++){
 
               //
               var photoCont = document.createElement("div");
@@ -175,9 +177,8 @@ async function downloadImage(imageSrc, imgname) {
 
               //
               var image = document.createElement("img");
-              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/avatars/" + avatars[i] + ".png");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/square/" + square[i] + ".png");
               image.setAttribute("class", "img");
-              image.setAttribute("height", "300");
 
               photoHold.appendChild(image);
 
@@ -188,7 +189,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonDown = document.createElement("button")
               buttonDown.setAttribute("class", "down");
-              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/avatars/' + avatars[i] + '.png', characters[i])};
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/square/' + square[i] + '.png', square[i])};
               buttonDown.innerHTML = '<i class="fas fa-download"></i>'
 
               descHold.appendChild(buttonDown);
@@ -196,7 +197,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonUp = document.createElement("button")
               buttonUp.setAttribute("class", "share");
-              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/avatars/' + avatars[i] + '.png')};
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/square/' + square[i] + '.png')};
               buttonUp.innerHTML = '<i class="fas fa-link"></i>'
 
               descHold.appendChild(buttonUp);
