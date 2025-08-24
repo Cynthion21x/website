@@ -62,11 +62,11 @@ async function downloadImage(imageSrc, imgname) {
 
 // Load Content
 
-  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "charlotteScared", "sunBeam", "beetd", "tompfp-bg","wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
+  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "sunBeam", "beetd", "tompfp-bg","wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
 
   const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon"];
 
-  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNeglectsEmpty", "shadowyCard", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cardGod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer"]; 
+  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "shadowyCard", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer"]; 
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
@@ -79,7 +79,7 @@ async function downloadImage(imageSrc, imgname) {
 
       if (id == 'ver') {
 
-          for (let i = 0; i < vertical.length; i++){
+          for (let i = vertical.length - 1; i >= 0; i--){
 
               //
               var photoCont = document.createElement("div");
@@ -167,7 +167,7 @@ async function downloadImage(imageSrc, imgname) {
 
       } else if (id == "squ"){
 
-          for (let i = 0; i < square.length; i++){
+          for (let i = square.length - 1; i >= 0; i--){
 
               //
               var photoCont = document.createElement("div");
