@@ -62,11 +62,11 @@ async function downloadImage(imageSrc, imgname) {
 
 // Load Content
 
-  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "sunBeam", "beetd", "tompfp-bg","wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
+  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "sunBeam", "sunechos", "stirringspritesouls", "moondrops", "beetd", "tompfp-bg","wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
 
-  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon"];
+  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon", "caterpillar2"];
 
-  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "shadowyCard", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer"]; 
+  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "shadowyCard", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects"]; 
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
