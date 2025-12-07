@@ -242,7 +242,7 @@ async function downloadImage(imageSrc, imgname) {
               //
               var buttonUp = document.createElement("button")
               buttonUp.setAttribute("class", "share");
-              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/square/' + square[i] + '.jpg')};
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/photo/' + photos[i] + '.jpg')};
               buttonUp.innerHTML = '<i class="fas fa-link"></i>'
 
               descHold.appendChild(buttonUp);
