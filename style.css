@@ -285,7 +285,7 @@ body {
     position: absolute;
     width: 90%;
     left: 5%;
-    height: 65%;
+    padding-top: 56.25%;
 }
 
 .square-grid {

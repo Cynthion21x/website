@@ -265,38 +265,36 @@ async function downloadImage(imageSrc, imgname) {
 
   }
 
-  function linkSite(url, name, id){
+function linkSite(url, name, id){
+    main.innerHTML = '';
+    title.innerHTML = 'Cynthion21x | ' + name;
 
-      main.innerHTML = '';
+    const emHold = document.createElement("div");
+    emHold.classList.add("page");
+    emHold.style.width = "90%";
+    emHold.style.margin = "20px auto";
+    emHold.style.paddingTop = "56.25%";
+    emHold.style.border = "4px solid white";
 
-      title.innerHTML = 'Cynthion21x | ' + name;
+    const embedd = document.createElement("embed");
+    embedd.type = "text/html";
+    embedd.src = url;
+    embedd.style.position = "absolute";
+    embedd.style.top = "0";
+    embedd.style.left = "0";
+    embedd.style.width = "100%";
+    embedd.style.height = "100%";
+    embedd.style.display = "block";
 
-      var embedd = document.createElement("embed");
+    emHold.appendChild(embedd);
+    main.appendChild(emHold);
 
-      var emHold = document.createElement("div");
+    const idd = document.getElementById(id);
+    const activ = document.getElementsByClassName("active");
+    if (activ[0]) activ[0].className = "";
+    idd.className = "active";
+}
 
-      embedd.setAttribute("type", "text/html");
-      embedd.setAttribute("src", url);
-      embedd.setAttribute("width", "100%");
-      embedd.setAttribute("height", "100%");
-
-      emHold.setAttribute("style", "border: 4px solid white;");
-
-      emHold.setAttribute("class", "page");
-
-      emHold.appendChild(embedd);
-      main.appendChild(emHold);
-
-      var idd = document.getElementById(id);
-
-      activ = document.getElementsByClassName("active");
-
-      activ[0].setAttribute("class", "");
-
-      idd.setAttribute("class", "active");
-
-
-  }
 
 
   function loadGames() {
