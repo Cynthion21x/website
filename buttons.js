@@ -62,11 +62,13 @@ async function downloadImage(imageSrc, imgname) {
 
 // Load Content
 
-  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "sunBeam", "sunechos", "stirringspritesouls", "moondrops", "beetd", "tompfp-bg","wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
+  const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "pfp-background", "sunBeam", "sunechos", "stirringspritesouls", "moondrops", "kaypfp", "beetd", "tompfp-bg", "cynthpfp2", "wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless"];
 
-  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon", "caterpillar2", "gastrodon", "cormorant"];
+  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "redLiz", "vulture", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon", "caterpillar2", "gastrodon", "cormorant"];
 
-  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "shadowyCard", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects"]; 
+  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cat", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects"]; 
+
+  const photo = ["161100", "ladybird", "moth", "goose", "154634", "154459", "154341", "154150", "154049", "154049", "154027", "114145"];
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
@@ -198,6 +200,49 @@ async function downloadImage(imageSrc, imgname) {
               var buttonUp = document.createElement("button")
               buttonUp.setAttribute("class", "share");
               buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/square/' + square[i] + '.png')};
+              buttonUp.innerHTML = '<i class="fas fa-link"></i>'
+
+              descHold.appendChild(buttonUp);
+
+              photoHold.appendChild(descHold);
+
+              photoCont.appendChild(photoHold);
+              main.appendChild(photoCont)
+              }
+
+      } else if (id == "ph"){
+
+          for (let i = photos.length - 1; i >= 0; i--){
+
+              //
+              var photoCont = document.createElement("div");
+              photoCont.setAttribute("class", "container");
+              var photoHold = document.createElement("div");
+              photoHold.setAttribute("class", "imgCont");
+
+              //
+              var image = document.createElement("img");
+              image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/photo/" + photos[i] + ".jpg");
+              image.setAttribute("class", "img");
+
+              photoHold.appendChild(image);
+
+              //
+              var descHold = document.createElement("div");
+              descHold.setAttribute("class", "desc");
+
+              //
+              var buttonDown = document.createElement("button")
+              buttonDown.setAttribute("class", "down");
+              buttonDown.onclick = function() {downloadImage('https://cynthion21x.github.io/website/gallery/photo/' + photos[i] + '.jpg', photos[i])};
+              buttonDown.innerHTML = '<i class="fas fa-download"></i>'
+
+              descHold.appendChild(buttonDown);
+
+              //
+              var buttonUp = document.createElement("button")
+              buttonUp.setAttribute("class", "share");
+              buttonUp.onclick = function() {copyTextToClipboard('https://cynthion21x.github.io/website/gallery/square/' + square[i] + '.jpg')};
               buttonUp.innerHTML = '<i class="fas fa-link"></i>'
 
               descHold.appendChild(buttonUp);
