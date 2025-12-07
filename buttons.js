@@ -68,7 +68,7 @@ async function downloadImage(imageSrc, imgname) {
 
   const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cat", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects"]; 
 
-  const photos = ["161100", "ladybird", "moth", "goose", "154634", "154459", "154341", "154150", "154049", "154049", "154027", "114145"];
+  const photos = ["ladybird", "moth", "goose", "154634", "154459", "154341", "154150", "154049", "154027", "114145", "161100"];
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
@@ -93,7 +93,7 @@ async function downloadImage(imageSrc, imgname) {
               var image = document.createElement("img");
               image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/vertical/" + vertical[i] + ".png");
               image.setAttribute("class", "img");
-              image.setAttribute("height", "506");
+              //image.setAttribute("height", "506");
 
               photoHold.appendChild(image);
 
@@ -137,7 +137,7 @@ async function downloadImage(imageSrc, imgname) {
               var image = document.createElement("img");
               image.setAttribute("src", "https://cynthion21x.github.io/website/gallery/" + horizontal[i] + ".png");
               image.setAttribute("class", "img");
-              image.setAttribute("height", "174");
+              //image.setAttribute("height", "174");
 
               photoHold.appendChild(image);
 
