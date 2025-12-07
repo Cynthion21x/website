@@ -68,7 +68,7 @@ async function downloadImage(imageSrc, imgname) {
 
   const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cat", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects"]; 
 
-  const photo = ["161100", "ladybird", "moth", "goose", "154634", "154459", "154341", "154150", "154049", "154049", "154027", "114145"];
+  const photos = ["161100", "ladybird", "moth", "goose", "154634", "154459", "154341", "154150", "154049", "154049", "154027", "114145"];
 
   const main = document.getElementById("main");
   const title = document.getElementById("title");
