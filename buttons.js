@@ -78,6 +78,14 @@ async function downloadImage(imageSrc, imgname) {
       main.innerHTML = '';
 
       title.innerHTML = 'Cynthion21x | ' + Characters;
+      
+        if(id === "squ") {
+            main.classList.add("square-grid");
+            main.style.columns = "unset";
+        } else {
+            main.classList.remove("square-grid");
+            main.style.columns = "";
+        }
 
       if (id == 'ver') {
 

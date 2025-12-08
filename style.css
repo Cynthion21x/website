@@ -1,24 +1,20 @@
-.down {
-    position: absolute;
+.down,
+.share {
+    aspect-ratio: 1 / 1;
+    font-size: 22px;
+    border-radius: 7px;
     border: none;
     background-color: #008CBA;
     color: white;
-    border-radius: 4px;
-    font-size: 20px;
+    position: absolute;
     top: 22%;
-    right: 25%;
+    z-index: 999999 !important;
+    pointer-events: auto;
 }
 
-.share {
-    position: absolute;
-    border: none;
-    background-color: #008CBA;
-    color: white;
-    border-radius: 4px;
-    font-size: 20px;
-    top: 22%;
-    left: 25%;
-}
+.down { right: 25%; }
+.share { left: 25%; }
+
 
 .img {
     border: 3px solid white;
