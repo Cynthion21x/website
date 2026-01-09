@@ -2,84 +2,81 @@
 <html>
     <head>
 
-        <title id="title">cynthion21x | Artwork</title>
+        <title id="title">cynthion21x | Main</title>
 
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
 
         <script src="https://kit.fontawesome.com/e7082d94ee.js" crossorigin="anonymous"></script>
 
         <meta property="og:title" content="cynthion21x"/>
-        <meta property="og:description" content="Welcome to cynthion21x's art gallery here you can see all of my crazy artwork and other silly projects, most of it was probably made for fun :)
+        <meta property="og:description" content="Welcome to cynthion21x's website here you can see all of my crazy artwork and other silly projects, most of it was probably made for fun :)
 		6CO2 + 6H2O -> C6H12O6 + 6O2 "/>
         <meta property="og:image" content="https://cynthion21x.github.io/website/gallery/jellyfish.png"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="about.css">
 
     </head>
 
-  	<body onload="loadImages('Horizontal', 'hor')">
+  	<body>
 
-  		<center><h1 style="color:white; text-decoration:underline;pointer-events: none;">cynthion21x</h1></center>
+        <canvas id="canvas"></canvas>
 
-  		<ul>
+        <img id="pfp" src="https://cynthion21x.github.io/website/gallery/square/bird.png" width=200px height=200px> <h1 class="title">cynthion21x</h1>
 
-            <li><a id="ver" onclick="loadImages('Vertical', 'ver')">Vertical</a></li>
-            <li><a id="hor" class="active" onclick="loadImages('Horizontal', 'hor')">Horizontal</a></li>
-            <li><a id="squ" onclick="loadImages('Square', 'squ')">Square</a></li>
-            <li><a id="ph" onclick="loadImages('Photos', 'ph')">Photos</a></li>
-            <li><p style="color:white;pointer-events: none;"> | </p></li>
-            <li><a id="pas" onclick="linkSite('https://cynthion21x.github.io/JsPasswordMaker/', 'Password', 'pas')">Password</a></li>
-            <li><p style="color:white;pointer-events: none;"> | </p></li>
-            <!-- <li><a id="ga" onclick="loadGames()">Games</a></li> -->
+        <img id="circle" src="aboutMe/circle.png">
 
-		</ul>
+        <div id="chars">
+            <img src="aboutMe/benny.png">
+            <img src="aboutMe/narrator.png">
+            <img src="aboutMe/vitria.png">
+            <img src="aboutMe/corva.png">
+        </div>
 
-         <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <div class="grid">
 
-		<hr style="color:white;width:87%;border-radius:3px;border:2px solid white;">
+            <section class="panel about ">
+                <h2>About me</h2>
+                <p>
+                Cynth here. It is time to talk about myself.</p>
+                <p>I am writing here today, ready to leave my stain upon the world. I make lots of things. I waste away most of my days by programming and doing art.</p> 
+                <p>Recently, I have taken it upon myself to learn how to make music for my game projects.</p>
 
-		<br>
+                <p>I enjoy simple systems that lead to complex emergent behavior.</p>
 
-        <div id="main">
+                <p>As an avid nature enthusiast, I find it interesting to observe wildlife. Bugs are cool, so are birds, but there is loads more interesting wildlife out in the deep blue.</p>
 
-            <!--<div class="container">
+                <p>I mainly like to program using Haskell, Rust, and Python. I am also studying physics.</p>
 
-                <div class="imgCont">
+                <p>And that's a wrap, folks. Time to get on with the rest of your day!</p>
+            </section>
 
-                    <img src="gallery/gameBanners/beeTD.png" width="600" height="400" class="img">
+            <section class="panel socials col">
+                <h3>Socials</h3>
+                <ul>
+                    <li> Bluesky - <a href="https://bsky.app/profile/cynthion21x.co.uk">https://bsky.app/profile/cynthion21x.co.uk</a> </li>
+                    <li>X - <a href="https://x.com/cynthion21x"> https://x.com/cynthion21x </a></li>
+                    <li>Instagram - &lt;a href=""<a href="https://www.instagram.com/cynthion21x/">https://www.instagram.com/cynthion21x</a>&gt;&lt;/a&gt;</li>
+                    <li>Youtube -<a href="https://www.youtube.com/@cynthion21x"> https://www.youtube.com/@cynthion21x</a></li>
+                    <li>Github - <a href="https://github.com/Cynthion21x">https://github.com/Cynthion21x</a></li>
+                </ul>
+            </section>
 
-                    <div class="desc">
-
-                        <a><i class="fas fa-download"></a>
-
-                    </div>
-
-                </div>
-
-            </div> -->
+            <section class="panel projects">
+                <h3>Explore My Projects</h3>
+                <ul>
+                    <li><a href="gallery.html">Art</a></li>
+                    <li><a href="beetd.html">BeeTD</a></li>
+                    <li><a href="tce.html">The Caterpillar Express</a></li>
+                </ul>
+            </section>
 
         </div>
 
-        <div id="popup">Link Copied</div>
+        <a class="email" href="mailto:cynth@cynthion21x.co.uk">mailto:cynth@cynthion21x.co.uk</a>
 
-        <div class="Sicons">
-            <a href="https://github.com/cynthion21x"><i class="fab fa-github-alt"></i></a>
-        </div>
-
-        <script src="buttons.js"></script> 
+        <script src="about.js"></script> 
 
         <script>
 
