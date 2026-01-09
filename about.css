@@ -92,7 +92,6 @@ h1::after {
     opacity: 0.6;
 }
 
-/* ===== HEADINGS ===== */
 
 h2 {
     font-size: 1.9rem;
@@ -285,6 +284,7 @@ a:hover {
     }
 
     #pfp { display: none; }
+    #chars { display: none; }
 }
 
 @import url("https://rsms.me/inter/inter.css");
