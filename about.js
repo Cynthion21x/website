@@ -37,7 +37,7 @@ function createBackground() {
 createBackground();
 
 const items = [];
-const preRenderedCircles = []; // store pre-rendered blurred circles
+const preRenderedCircles = [];
 
 function createCircleCanvas(radius, blur, colorOne, colorTwo) {
   const offCanvas = document.createElement('canvas');
@@ -57,7 +57,6 @@ function createCircleCanvas(radius, blur, colorOne, colorTwo) {
   return offCanvas;
 }
 
-// Precompute items and their canvases
 for (let i = 0; i < count; i++) {
   const radius = rand(...radiusRange);
   const blur = rand(...blurRange);
@@ -68,9 +67,9 @@ for (let i = 0; i < count; i++) {
   const colorOne = colors[colorIndex][0];
   const colorTwo = colors[colorIndex][1];
 
-  const dx = rand(-0.5, 0.5); // slower initial speed
+  const dx = rand(-0.5, 0.5);
   const dy = rand(-0.5, 0.5);
-  const dBlur = rand(-0.1, 0.1); // optional slow blur fluctuation
+  const dBlur = rand(-0.1, 0.1);
 
   const preCanvas = createCircleCanvas(radius, blur, colorOne, colorTwo);
   preRenderedCircles.push(preCanvas);
@@ -78,33 +77,27 @@ for (let i = 0; i < count; i++) {
   items.push({ x, y, radius, blur, dx, dy, dBlur });
 }
 
-// Animation loop
 function animate() {
   ctx.clearRect(0, 0, width, height);
   ctx.fillStyle = backgroundGradient;
   ctx.fillRect(0, 0, width, height);
 
   items.forEach((item, i) => {
-    // Add some erratic jitter
     item.dx += rand(-0.05, 0.05);
     item.dy += rand(-0.05, 0.05);
 
-    // Clamp dx/dy to keep movement slow
     item.dx = Math.max(Math.min(item.dx, 1), -1);
     item.dy = Math.max(Math.min(item.dy, 1), -1);
 
-    // Bounce off walls
     if (item.x + item.dx > width || item.x + item.dx < 0) item.dx *= -1;
     if (item.y + item.dy > height || item.y + item.dy < 0) item.dy *= -1;
 
     item.x += item.dx;
     item.y += item.dy;
 
-    // Optional: slowly fluctuate blur
     item.blur += item.dBlur;
     if (item.blur < blurRange[0] || item.blur > blurRange[1]) item.dBlur *= -1;
 
-    // Draw pre-rendered circle
     const preCanvas = preRenderedCircles[i];
     ctx.drawImage(preCanvas, item.x - preCanvas.width / 2, item.y - preCanvas.height / 2);
   });

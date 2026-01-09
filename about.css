@@ -414,7 +414,7 @@ canvas {
 }
 
 #chars img {
-    max-height: 200px;       /* Adjust size to fit nicely */
-    object-fit: contain;     /* Maintain aspect ratio */
+    max-height: 200px; 
+    object-fit: contain;
 }
 
