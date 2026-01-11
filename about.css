@@ -64,6 +64,7 @@ h1 {
     margin-bottom: 50px;
     position: relative;
     text-transform: uppercase;
+    color: black;
 }
 
 h1::before,
@@ -78,7 +79,7 @@ h1::after {
 }
 
 h1::before {
-    color: #fff;
+    /*color: #fff;*/
     transform: translate(2px, -1px);
     clip-path: inset(0 0 45% 0);
     opacity: 0.7;
@@ -86,7 +87,7 @@ h1::before {
 }
 
 h1::after {
-    color: #aaa;
+    /*color: #aaa;*/
     transform: translate(-3px, 2px);
     clip-path: inset(55% 0 0 0);
     opacity: 0.6;
@@ -271,22 +272,6 @@ a:hover {
     100% { opacity: 0.3; }
 }
 
-@media (max-width: 900px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about,
-    .socials,
-    .projects {
-        grid-column: auto;
-        transform: none;
-    }
-
-    #pfp { display: none; }
-    #chars { display: none; }
-}
-
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
@@ -416,5 +401,36 @@ canvas {
 #chars img {
     max-height: 200px; 
     object-fit: contain;
+}
+
+#bg {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    z-index: -1000;
+    pointer-events: none;
+}
+
+#mobile-warn {
+    display:none;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .socials,
+    .projects {
+        grid-column: auto;
+        transform: none;
+    }
+
+    #pfp { display: none; }
+    #chars { display: none; }
+    #mobile-warn {display:block;}
 }
 
