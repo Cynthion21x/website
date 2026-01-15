@@ -117,3 +117,33 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 
 }
+
+@media (max-width: 768px) {
+    #contents {
+        flex-direction: column;  /* stack sidebar + text */
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    #side, #text {
+        flex: 1 1 100%;
+    }
+
+    #vertical {
+        width: 80%;
+        left: 10%;
+        position: relative;
+        margin: 0;
+    }
+
+    #socials {
+        font-size: 1.1rem;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .links a {
+        flex: 1 1 100%;  /* one button per row */
+    }
+}
+
