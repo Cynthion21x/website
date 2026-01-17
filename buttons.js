@@ -64,9 +64,9 @@ async function downloadImage(imageSrc, imgname) {
 
   const square = ["strawberryCapKittens", "strawberryNeglects", "cat", "sylveon","god2", "charlotteLogo", "pfp-background", "sunBeam", "sunechos", "stirringspritesouls", "moondrops", "kaypfp", "beetd", "tompfp-bg", "cynthpfp2", "wooper", "lurantispfp", "kingfisher", "seaAngel", "caterpillarNotExpress", "toothless", "bird", "newdawn", "abstract", "feralshamans"];
 
-  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "redLiz", "vulture", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon", "caterpillar2", "gastrodon", "cormorant", "snowy", "Averevoir", "goat"];
+  const horizontal = ["Project_1", "catbg", "Charlotte", "crazy", "cynthBanner", "preview", "timelapse", "neglectsShowcase", "pawn", "beeTDirl", "terrariaEOC", "neglects2", "stormboundhalloween", "plasmaClocket", "mechaWasp", "lurantis", "charlottesLegacy-Title", "wanderingVillage", "bedman", "redLiz", "vulture", "jellyfish", "puffin", "EmperorCaterpillar", "cavesOfQudDragon", "caterpillar2", "gastrodon", "cormorant", "snowy", "Averevoir"];
 
-  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cat", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects", "leavanny"]; 
+  const vertical = ["Bearz", "ghostling", "cynthion", "hollowKnight", "perspective", "charlotte", "ErraticNegelectsEmpty", "waterGolem", "plasmaSquid", "PlasticGolem", "CloudKing", "sentinelKnight", "cat", "cardgod", "stormbound", "cynton", "seaslug", "BeeTd", "FieryNeglects", "cardconveyorplayer", "erraticNeglects", "leavanny", "goat"]; 
 
   const photos = ["ladybird", "moth", "goose", "154634", "154459", "154341", "154150", "154049", "154027", "114145", "161100", "goosereflect", "glow", "gooseduo", "redblue"];
 
